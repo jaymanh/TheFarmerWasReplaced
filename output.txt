@@ -1,0 +1,65 @@
+Warning: Tried to use Items.Water_Tank but didn't have any.
+In: PlantAll <- PlantRow <- TryWater
+use_item(Items.Water_Tank)
+        ^^                
+--------------------------------------------------------------------
+Warning: Tried to buy Items.Empty_Tank but didn't have enough items.
+In: PlantAll <- PlantRow <- TryWater
+trade(Items.Empty_Tank)
+     ^^                
+--------------------------------------------------------------------
+Warning: Tried to buy Items.Carrot_Seed but didn't have enough items.
+In: FarmAll <- FarmRow
+if not trade(Seed, 10):
+            ^^         
+--------------------------------------------------------------------
+Warning: Tried to plant Entities.Sunflower but there was already something there.
+In: main <- Power
+plant(Entities.Sunflower)
+     ^^                  
+--------------------------------------------------------------------
+Warning: Tried to plant Entities.Sunflower but there was already something there.
+In: main <- Power
+plant(Entities.Sunflower)
+     ^^                  
+--------------------------------------------------------------------
+Warning: Tried to buy Items.Sunflower_Seed but didn't have enough items.
+In: main <- Power
+if not trade(Items.Sunflower_Seed, 100):
+            ^^                          
+--------------------------------------------------------------------
+Warning: Tried to plant Entities.Pumpkin but there was already something there.
+In: main <- Pumpkin
+plant(Entities.Pumpkin)
+     ^^                
+--------------------------------------------------------------------
+Warning: Tried to plant Entities.Pumpkin but there was already something there.
+In: main <- Pumpkin
+plant(Entities.Pumpkin)
+     ^^                
+--------------------------------------------------------------------
+Warning: Tried to plant Entities.Pumpkin but there was already something there.
+In: main <- Pumpkin
+plant(Entities.Pumpkin)
+     ^^                
+--------------------------------------------------------------------
+Warning: Tried to buy Items.Fertilizer but didn't have enough items.
+In: main <- Maze <- solve_maze <- dfs <- dfs <- ...
+if not trade(Items.Fertilizer, 10):
+            ^^                     
+--------------------------------------------------------------------
+Warning: Tried to buy Items.Fertilizer but didn't have enough items.
+In: main <- Maze <- solve_maze <- dfs <- dfs <- ...
+if not trade(Items.Fertilizer, 10):
+            ^^                     
+--------------------------------------------------------------------
+Warning: Tried to buy Items.Cactus_Seed but didn't have enough items.
+In: main <- Do_Cactus
+if not trade(Items.Cactus_Seed, 100):
+            ^^                       
+--------------------------------------------------------------------
+Warning: Tried to buy Items.Egg but didn't have enough items.
+In: main <- DinoAll <- DinoRow
+if not trade(Items.Egg, 10):
+            ^^              
+--------------------------------------------------------------------

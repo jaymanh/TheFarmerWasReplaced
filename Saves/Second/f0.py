@@ -1,0 +1,3 @@
+PlantAll()
+while True:
+	FarmAll()
