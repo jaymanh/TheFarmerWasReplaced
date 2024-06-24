@@ -6,6 +6,7 @@ __pycache__/
 #custome
 *.vdf
 *.json
+*.txt
 
 # C extensions
 *.so
