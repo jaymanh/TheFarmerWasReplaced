@@ -2,9 +2,6 @@ def Pumpkin():
 	clear()
 	PlantAll(Entities.Pumpkin, Items.Pumpkin_Seed)
 	Home()
-	world = get_world_size() - 1
-	bX = get_world_size()
-	bY = bX
 	Unchecked = []
 	while True:
 		if num_items(Items.Pumpkin_Seed) < 100:

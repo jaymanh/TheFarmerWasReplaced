@@ -34,5 +34,5 @@ def Power():
                         break
             listSFH = []
             Home()
-
-Power()
+while True:
+	Power()
