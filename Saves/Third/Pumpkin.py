@@ -1,5 +1,4 @@
 def Pumpkin():
-	#clear()
 	PlantAll(Entities.Pumpkin, Items.Pumpkin_Seed)
 	Home()
 	Unchecked = []

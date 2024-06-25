@@ -1,10 +1,9 @@
-def Power():
-	HarvestAll()
+def Power(desired = 1000):
+    HarvestAll()
     reset = 0
     listSFH = []
     last = 15
-    a = 0
-    while a < 4:
+    while True:
         if num_items(Items.Sunflower_Seed) < 100:
             if not trade(Items.Sunflower_Seed, 100):
                 return
@@ -22,6 +21,8 @@ def Power():
                         GoTo(i[0], i[1])
                         harvest() 
                 last -= 1
+            if desired < num_items(Items.power):
+                return
             last = 15
             reset += 1
             if reset > 1:
@@ -29,10 +30,9 @@ def Power():
                     if j[2] == 7:
                         GoTo(j[0], j[1])
                         harvest()
-                        a += 1
                         reset = 0
                         break
             listSFH = []
             Home()
-while True:
-	Power()
+
+Power()

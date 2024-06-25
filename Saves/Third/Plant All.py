@@ -1,4 +1,10 @@
-def PlantAll(Crop = Entities.Carrots, Seed = Items.Carrot_Seed):
+def PlantAll(Crop = {Items.Wheet: 100}):
+	if Items.Wheet not in Crop and Items.Carrot not in Crop and Items.Wood not in Crop:
+		return
+	Seed = None
+	if Items.Carrot in Crop:
+		Seed = Items.Carrot_Seed
+	
 	Home()
 	trade(Seed, 20)
 	harvest()
