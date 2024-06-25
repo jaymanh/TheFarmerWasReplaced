@@ -13,13 +13,13 @@ def Maze():
 	        # Mark the current cell as visited
 			visited.add((x, y))
 	        # Check if the current position has the treasure	        
-			if get_entity_type() == Entities.Treasure and j > 29:
+			if get_entity_type() == Entities.Treasure and j > 298:
 				harvest()
 				plant(Entities.Bush)
 				while(get_entity_type() == Entities.Bush):
 					if(num_items(Items.Fertilizer) < 10):
 						if not trade(Items.Fertilizer, 10):
-							j = 29
+							j = 298
 							return True
 					use_item(Items.Fertilizer)
 				return True
@@ -27,7 +27,7 @@ def Maze():
 				while(get_entity_type() == Entities.Treasure):
 					if(num_items(Items.Fertilizer) < 10):
 						if not trade(Items.Fertilizer, 10):
-							j = 29
+							j = 298
 							return
 					use_item(Items.Fertilizer)
 				return True
@@ -57,9 +57,11 @@ def Maze():
 			if not trade(Items.Fertilizer, 10):
 				return
 		use_item(Items.Fertilizer)
-	while(j < 31):
+	while(j < 300):
 		visited = set()
 		solve_maze()
 		j += 1
 	harvest()
+a = get_time()
 Maze()
+quick_print(get_time() - a)

@@ -1,5 +1,5 @@
 def Pumpkin():
-	clear()
+	#clear()
 	PlantAll(Entities.Pumpkin, Items.Pumpkin_Seed)
 	Home()
 	Unchecked = []
@@ -36,6 +36,9 @@ def Pumpkin():
 					harvest()
 					return
 				Unchecked = TempList		
-		
-while True:
+a = get_time()
+b = num_items(Items.Pumpkin)
+while get_time() - a < 60:
 	Pumpkin()
+print(get_time() - a)
+print(num_items(Items.Pumpkin) - b)

@@ -1,5 +1,5 @@
 def Power():
-    clear()
+	HarvestAll()
     reset = 0
     listSFH = []
     last = 15
