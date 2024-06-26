@@ -1,4 +1,4 @@
-def BuyUnlcok(Tech = Unlocks.Speed):
+def BuyUnlock(Tech = Unlocks.Speed):
 	if not unlock(Tech):
 		cost = get_cost(Tech)
 		Grass(cost)
@@ -8,4 +8,7 @@ def BuyUnlcok(Tech = Unlocks.Speed):
 		Maze(cost)
 		Cactus(cost)
 		Dino(cost)
-		BuyUnlcok(Tech)
+		if {Items.Power} in cost:
+			amount = desired[Items.Hay] * 1.5
+			Power(amount) 
+		BuyUnlock(Tech)
