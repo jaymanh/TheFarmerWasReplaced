@@ -75,9 +75,9 @@ def Maze(desired = {Items.Gold: 100}, multiple = 1):
 				j = 299
 				test = False
 				Pumpkin = True
+	harvest()
 	if Pumpkin:
 		Buy(Items.Fertilizer, 50)
-	harvest()
 a = get_time()
 Maze({Items.Gold: 100}, 1000000000000000)
 quick_print(get_time() - a)
