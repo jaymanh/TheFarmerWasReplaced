@@ -4,7 +4,7 @@ def Power(desired = 1000):
     listSFH = []
     last = 15
     while True:
-        if num_items(Items.Sunflower_Seed) < get_world_size() * get_world_size() * 4:
+        if num_items(Items.Sunflower_Seed) < 200:
             Buy(Items.Sunflower_Seed, get_world_size() * get_world_size() * 4)
             HarvestAll()
         WaterTill()

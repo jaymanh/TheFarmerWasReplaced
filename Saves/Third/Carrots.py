@@ -11,7 +11,7 @@ def Carrots(desired = {Items.Carrot: 100}, multiple = 1):
 		WaterTill()
 		
 		if num_items(Items.Carrot_Seed) < 5:
-			Buy(Items.Carrot_Seed, 20)
+			Buy(Items.Carrot_Seed, 80)
 		if get_entity_type() == None:
 			plant(Entities.Carrots)
 			

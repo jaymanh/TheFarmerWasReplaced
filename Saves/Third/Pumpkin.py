@@ -7,7 +7,7 @@ def Pumpkin(desired = {Items.Pumpkin: 100}, multiple = 1):
 	Unchecked = []
 	while True:
 		if num_items(Items.Pumpkin_Seed) < 100:
-			Buy(Items.Pumpkin_Seed, 100)	
+			Buy(Items.Pumpkin_Seed, 200)	
 			
 		if not can_harvest() and get_entity_type() == Entities.Pumpkin:
 			Unchecked.append([get_pos_x(), get_pos_y(), None])
