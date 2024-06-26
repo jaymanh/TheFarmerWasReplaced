@@ -2,9 +2,9 @@ def Cactus(desired = {Items.Cactus: 100}, multiple = 1):
 	if Items.Cactus not in desired:
 		return
 	amount = desired[Items.Cactus] * multiple
-	Home()
+	clear()
+	seeds = get_world_size() * get_world_size() + 20
 	while amount > num_items(Items.Cactus):
-		seeds = get_world_size() * get_world_size() + 10
 		if (num_items(Items.Cactus_Seed) < seeds):
 			Buy(Items.Cactus_Seed, seeds)
 		PlantAll(Entities.Cactus, Items.Cactus_Seed)
