@@ -8,7 +8,7 @@ def BuyUnlock(Tech = Unlocks.Speed):
 		Maze(cost)
 		Cactus(cost)
 		Dino(cost)
-		if {Items.Power} in cost:
-			amount = desired[Items.Hay] * 1.5
+		if Items.Power in cost:
+			amount = cost[Items.Power] * 1.5
 			Power(amount) 
 		BuyUnlock(Tech)
