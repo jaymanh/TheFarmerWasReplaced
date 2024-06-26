@@ -10,7 +10,7 @@ def Maze(desired = {Items.Gold: 100}, multiple = 1):
 	
 	visited = set()
 	j = 0
-	size = (get_world_size() / 2) * 100
+	size = (get_world_size() / 2) * (20 * num_unlocked(Unlocks.Mazes))
 	current = size
 	def solve_maze():
 		def dfs(x, y):
