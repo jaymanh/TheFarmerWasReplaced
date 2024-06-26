@@ -1,12 +1,7 @@
-def PlantAll(Crop = {Items.Wheet: 100}):
-	if Items.Wheet not in Crop and Items.Carrot not in Crop and Items.Wood not in Crop:
-		return
-	Seed = None
-	if Items.Carrot in Crop:
-		Seed = Items.Carrot_Seed
-	
+def PlantAll(Crop = Entities.Pumpkin, Seed = Items.Pumpkin_Seed):
 	Home()
-	trade(Seed, 20)
+	if num_items(Seed) < 5:
+		Buy(Seed, 20)
 	harvest()
 	WaterTill()
 	plant(Crop)
@@ -15,7 +10,7 @@ def PlantAll(Crop = {Items.Wheet: 100}):
 		harvest()
 		WaterTill()
 		if num_items(Seed) < 5:
-			trade(Seed, 20)
+			Buy(Seed, 20)
 		plant(Crop)
 		Next()
 		if not get_pos_x() and not get_pos_y():

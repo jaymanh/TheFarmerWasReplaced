@@ -1,11 +1,13 @@
-def Pumpkin():
-	PlantAll(Entities.Pumpkin, Items.Pumpkin_Seed)
+def Pumpkin(desired = {Items.Pumpkin: 100}, multiple = 1):
+	if Items.Pumpkin not in desired:
+		return
+	amount = desired[Items.Pumpkin] * multiple
+	PlantAll()
 	Home()
 	Unchecked = []
 	while True:
 		if num_items(Items.Pumpkin_Seed) < 100:
-			if not trade(Items.Pumpkin_Seed, 100):
-				return
+			Buy(Items.Pumpkin_Seed, 100)	
 			
 		if not can_harvest() and get_entity_type() == Entities.Pumpkin:
 			Unchecked.append([get_pos_x(), get_pos_y(), None])
@@ -33,11 +35,13 @@ def Pumpkin():
 				if b == 0:	
 					Home()
 					harvest()
+					if num_items(Items.Pumpkin) >= amount:
+						return
 					return
 				Unchecked = TempList		
-a = get_time()
 b = num_items(Items.Pumpkin)
+a = get_time()
 while get_time() - a < 60:
 	Pumpkin()
-print(get_time() - a)
-print(num_items(Items.Pumpkin) - b)
+quick_print(get_time() - a)
+quick_print(num_items(Items.Pumpkin) - b)

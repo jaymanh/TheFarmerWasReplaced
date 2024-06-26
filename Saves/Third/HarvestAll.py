@@ -7,3 +7,4 @@ def HarvestAll():
 		Next()
 		if not get_pos_x() and not get_pos_y():
 			return
+HarvestAll(True)

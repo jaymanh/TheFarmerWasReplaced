@@ -10,7 +10,7 @@ def Power(desired = 1000):
 
         WaterTill()
         plant(Entities.Sunflower)
-                
+               
         listSFH.append([get_pos_x(), get_pos_y(), measure()])
         Next()
 
