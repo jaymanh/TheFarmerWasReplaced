@@ -1,12 +1,11 @@
 def Power(desired = 1000):
+    if num_items(Items.Sunflower_Seed) < 200:
+        Buy(Items.Sunflower_Seed, 400)
     HarvestAll()
     reset = 0
     listSFH = []
     last = 15
     while True:
-        if num_items(Items.Sunflower_Seed) < 200:
-            Buy(Items.Sunflower_Seed, get_world_size() * get_world_size() * 4)
-            HarvestAll()
         WaterTill()
         plant(Entities.Sunflower)
                
@@ -30,8 +29,11 @@ def Power(desired = 1000):
                         GoTo(j[0], j[1])
                         harvest()
                         reset = 0
+                        if num_items(Items.Sunflower_Seed) < 200:
+                            Buy(Items.Sunflower_Seed, 400)
+                            HarvestAll()
                         break
             listSFH = []
             Home()
 
-Power()
+Power(100000000000)
