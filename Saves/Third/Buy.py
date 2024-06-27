@@ -1,5 +1,7 @@
 def Buy(Item = Items.Carrot_Seed, Amount = 10):
-	if not trade(Item, Amount):
+	a = True
+	if not trade(Item, Amount): 
+		a = False
 		cost = get_cost(Item)
 		Grass(cost, Amount)
 		Tree(cost, Amount)
@@ -9,3 +11,5 @@ def Buy(Item = Items.Carrot_Seed, Amount = 10):
 		Cactus(cost, Amount)
 		Dino(cost, Amount)
 		Buy(Item, Amount)
+	return a
+		

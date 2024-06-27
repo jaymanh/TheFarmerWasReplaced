@@ -30,8 +30,8 @@ def Power(desired = 1000):
                         harvest()
                         reset = 0
                         if num_items(Items.Sunflower_Seed) < 200:
-                            Buy(Items.Sunflower_Seed, 400)
-                            HarvestAll()
+                            if not Buy(Items.Sunflower_Seed, 400):
+								HarvestAll()
                         break
             listSFH = []
             Home()
