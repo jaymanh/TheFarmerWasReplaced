@@ -2,7 +2,7 @@ def Cactus(desired = {Items.Cactus: 100}, multiple = 1):
 	if Items.Cactus not in desired:
 		return
 	amount = desired[Items.Cactus] * multiple
-	clear()
+	HarvestAll()
 	seeds = get_world_size() * get_world_size() + 20
 	while amount > num_items(Items.Cactus):
 		if (num_items(Items.Cactus_Seed) < seeds):
