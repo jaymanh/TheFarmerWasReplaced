@@ -1,14 +1,14 @@
-def PlantAll(Crop = Entities.Pumpkin, Seed = Items.Pumpkin_Seed):
+def PlantAll(Crop = Entities.Pumpkin, Seed = Items.Pumpkin_Seed, Water = True):
 	Home()
 	if num_items(Seed) < 5:
 		Buy(Seed, 20)
 	harvest()
-	WaterTill()
+	WaterTill(Water)
 	plant(Crop)
 	Next()
 	while True:
 		harvest()
-		WaterTill()
+		WaterTill(Water)
 		if num_items(Seed) < 5:
 			Buy(Seed, 20)
 		plant(Crop)

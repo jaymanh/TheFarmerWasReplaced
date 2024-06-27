@@ -7,7 +7,7 @@ def Cactus(desired = {Items.Cactus: 100}, multiple = 1):
 	while amount > num_items(Items.Cactus):
 		if (num_items(Items.Cactus_Seed) < seeds):
 			Buy(Items.Cactus_Seed, seeds)
-		PlantAll(Entities.Cactus, Items.Cactus_Seed)
+		PlantAll(Entities.Cactus, Items.Cactus_Seed, False)
 		Sort_Cactuses()
 		harvest()
 	
