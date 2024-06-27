@@ -17,7 +17,7 @@ def Home():
 	while get_pos_y() != 0:
 		move(diry)
 		
-def basicGoTo(x, y):
+def basicGoTo(x = 0, y = 0):
 	while x != get_pos_x():
 		if x > get_pos_x():
 			move(East)
@@ -29,7 +29,7 @@ def basicGoTo(x, y):
 		else:
 			move(North)
 
-def GoTo(x, y):
+def GoTo(x = 0, y = 0):
 	distance_x = x - get_pos_x()
 	distance_y = y - get_pos_y()
 
