@@ -5,9 +5,14 @@ def BuyUnlock(Tech = Unlocks.Speed):
 		Cactus(cost)
 		Maze(cost)
 		Pumpkin(cost)
-		Carrots(cost)
-		Tree(cost)
-		Grass(cost)
+		if num_unlocked(Unlocks.Polyculture):
+			CarrotPoly(cost)
+			TreePoly(cost)
+			GrassPoly(cost)
+		else: 
+			Carrots(cost)
+			Tree(cost)
+			Grass(cost)
 		if Items.Power in cost:
 			amount = cost[Items.Power] * 1.5
 			Power(amount) 

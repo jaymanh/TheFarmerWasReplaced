@@ -7,9 +7,14 @@ def Buy(Item = Items.Carrot_Seed, Amount = 10):
 		Cactus(cost, Amount)
 		Maze(cost, Amount)
 		Pumpkin(cost, Amount)
-		Carrots(cost, Amount)
-		Tree(cost, Amount)
-		Grass(cost, Amount)
+		if num_unlocked(Unlocks.Polyculture):
+			CarrotPoly(cost, Amount)
+			TreePoly(cost, Amount)
+			GrassPoly(cost, Amount)
+		else:
+			Carrots(cost, Amount)
+			Tree(cost, Amount)
+			Grass(cost, Amount)
 		Buy(Item, Amount)
 	return a
 		

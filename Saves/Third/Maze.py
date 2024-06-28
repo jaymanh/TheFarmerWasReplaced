@@ -1,6 +1,8 @@
 def Maze(desired = {Items.Gold: 100}, multiple = 1):
 	if Items.Gold not in desired:
 		return
+	if num_items(Items.Pumpkin) < 100 * 10:
+		Pumpkin({Items.Pumpkin: 100}, 10)
 	amount = desired[Items.Gold] * multiple
 	clear()
 	# Define the directions and their vectors
@@ -70,8 +72,8 @@ def Maze(desired = {Items.Gold: 100}, multiple = 1):
 		if current > amount and test:
 			j = 299
 			test = False
-		if num_items(Items.Fertilizer) < 20:
-			if not trade(Items.Fertilizer, 10) and test:
+		if num_items(Items.Fertilizer) < 5:
+			if not trade(Items.Fertilizer, 40) and test:
 				j = 299
 				test = False
 				Pumpkin = True
