@@ -1,4 +1,5 @@
 def Start():
+	Start_time = get_time()
 	timed_reset()
 	for i in range(101):
 		harvest()
@@ -31,7 +32,7 @@ def Start():
 			harvest()
 		Next()
 	unlock(Unlocks.Grass)
-	while num_items(Items.Wood) < 215:
+	while num_items(Items.Wood) < 211:
 		if can_harvest():
 			harvest()
 			plant(Entities.Bush)
@@ -50,6 +51,7 @@ def Start():
 		plant(Entities.Carrots)
 		Next()
 	unlock(Unlocks.Trees)
+	quick_print("Early Game: ", get_time() - Start_time)
 	Autoplay()
-
+	
 Start()
