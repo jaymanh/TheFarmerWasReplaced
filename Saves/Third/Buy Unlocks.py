@@ -11,7 +11,7 @@ def BuyUnlock(Tech = Unlocks.Speed):
 			GrassPoly(cost)
 		else: 
 			Carrots(cost)
-			Tree(cost)
+			Tree(cost, 1, Entities.Grass)
 			Grass(cost)
 		if Items.Power in cost:
 			amount = cost[Items.Power] * 1.5

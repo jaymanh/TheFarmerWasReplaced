@@ -13,7 +13,7 @@ def Buy(Item = Items.Carrot_Seed, Amount = 10):
 			GrassPoly(cost, Amount)
 		else:
 			Carrots(cost, Amount)
-			Tree(cost, Amount)
+			Tree(cost, Amount, Entities.Grass)
 			Grass(cost, Amount)
 		Buy(Item, Amount)
 	return a
