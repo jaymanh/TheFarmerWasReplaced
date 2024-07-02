@@ -1,4 +1,4 @@
-def Tree(desired = {Items.Wood: 100}, multiple = 1):
+def Tree(desired = {Items.Wood: 100}, multiple = 1, sub = None):
 	if Items.Wood not in desired:
 		return
 	amount = desired[Items.Wood] * multiple
@@ -15,6 +15,8 @@ def Tree(desired = {Items.Wood: 100}, multiple = 1):
 			plant(Entities.Tree)
 		elif get_pos_x() % 2 and get_pos_y() % 2 and get_entity_type() == None:
 			plant(Entities.Tree)
+		elif sub != None:
+			plant(sub)
 		
 		Next()
-Tree({Items.Wood: 100}, 10000000000)
+Tree({Items.Wood: 100}, 10000000000, Entities.Grass)
