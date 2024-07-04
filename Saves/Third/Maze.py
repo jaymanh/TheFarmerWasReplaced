@@ -4,7 +4,6 @@ def Maze(desired = {Items.Gold: 100}, multiple = 1):
 	if num_items(Items.Pumpkin) < 100 * 10:
 		Pumpkin({Items.Pumpkin: 100}, 10)
 	amount = desired[Items.Gold] * multiple
-	clear()
 	# Define the directions and their vectors
 	DIRECTIONS = [North, South, West, East]
 	DIRECTION_VECTORS = {North: (0, -1), South: (0, 1), West: (-1, 0), East: (1, 0)}
@@ -56,6 +55,7 @@ def Maze(desired = {Items.Gold: 100}, multiple = 1):
 		initial_x, initial_y = get_pos_x(), get_pos_y()
 		dfs(initial_x, initial_y)
 	
+	harvest()
 	plant(Entities.Bush)
 	while(get_entity_type() == Entities.Bush):
 		if(num_items(Items.Fertilizer) < 10):
