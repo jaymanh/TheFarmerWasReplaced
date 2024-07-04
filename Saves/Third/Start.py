@@ -1,9 +1,11 @@
 def Start():
 	Start_time = get_time()
 	timed_reset()
-	for i in range(151):
+	for i in range(101):
 		harvest()
 	unlock(Unlocks.Grass)
+	for i in range(25):
+		harvest()
 	unlock(Unlocks.Speed)
 	unlock(Unlocks.Expand)
 	while num_items(Items.Hay) < 50:
