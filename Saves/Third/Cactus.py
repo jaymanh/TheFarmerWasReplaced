@@ -14,12 +14,19 @@ def Cactus(desired = {Items.Cactus: 100}, multiple = 1):
 def Sort_Cactuses():
 	area = get_world_size()*get_world_size()
 	sorted = 0
-	
+	x = True
 	while (sorted < area):
-		sorted += 1
-		if (Swap_Cactus_Neighbours()):
-			sorted = 0
-		Next()
+		for i in range(area):
+			sorted += 1
+			if (Swap_Cactus_Neighbours()):
+				sorted = 0
+			if x:
+				Next()
+			else:
+				Back()
+			if sorted >= area:
+				break
+		x = not x
 		
 def Swap_Cactus_Neighbours():
 	Curr = measure()

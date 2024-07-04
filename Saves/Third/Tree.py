@@ -19,4 +19,4 @@ def Tree(desired = {Items.Wood: 100}, multiple = 1, sub = None):
 			plant(sub)
 		
 		Next()
-Tree({Items.Wood: 100}, 10000000000, Entities.Grass)
+Tree({Items.Wood: 100}, 10000000000)

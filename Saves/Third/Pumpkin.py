@@ -5,7 +5,7 @@ def Pumpkin(desired = {Items.Pumpkin: 100}, multiple = 1):
 	PlantAll()
 	Home()
 	Unchecked = []
-	if num_items(Items.Pumpkin_Seed) < 140:
+	if num_items(Items.Pumpkin_Seed) < 100:
 			Buy(Items.Pumpkin_Seed, 200)
 			HarvestAll()
 	while True:			

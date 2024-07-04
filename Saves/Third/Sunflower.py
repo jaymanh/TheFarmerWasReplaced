@@ -1,6 +1,6 @@
 def Power(desired = 1000):
-    if num_items(Items.Sunflower_Seed) < 200:
-        Buy(Items.Sunflower_Seed, 400)
+    if num_items(Items.Sunflower_Seed) < 100:
+        Buy(Items.Sunflower_Seed, 200)
     HarvestAll()
     reset = 0
     listSFH = []
@@ -29,8 +29,8 @@ def Power(desired = 1000):
                         GoTo(j[0], j[1])
                         harvest()
                         reset = 0
-                        if num_items(Items.Sunflower_Seed) < 200:
-                            if not Buy(Items.Sunflower_Seed, 400):
+                        if num_items(Items.Sunflower_Seed) < 100:
+                            if not Buy(Items.Sunflower_Seed, 200):
                                 HarvestAll()
                         break
             listSFH = []

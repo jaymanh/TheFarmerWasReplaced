@@ -78,14 +78,39 @@ def Next():
 	if endx == x and endy == y:
 		move(North)
 		dir = East
-		if y % 2 != 0:
+		if y % 2:
 			return
 	elif x == world and y % 2 == 0:
 		dir = North
-	elif x != world and y % 2 ==0:
+	elif x != world and y % 2 == 0:
 		dir = East
 	elif x != 0 and y % 2 != 0:
 		dir = West
 	elif x == 0 and y % 2 != 0:
 		dir = North
 	move(dir)
+
+def Back():
+	world = get_world_size() -1 
+	endx = world
+	endy = world
+	if world % 2 != 0:
+		endx = 0
+	x = get_pos_x()
+	y = get_pos_y()
+	dir = West
+	if x == 0 and y == 0:
+		move(South)
+		dir = West
+		if endx % 2 == 0:
+			return
+	elif x == 0 and y % 2 == 0:
+		dir = South
+	elif x != 0 and y % 2 == 0:
+		dir = West
+	elif x != world and y % 2 != 0:
+		dir = East
+	elif x == world and y % 2 !=0:
+		dir = South
+	move(dir)
+	

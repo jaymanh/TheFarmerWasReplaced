@@ -63,7 +63,7 @@ def Maze(desired = {Items.Gold: 100}, multiple = 1):
 				return
 		use_item(Items.Fertilizer)
 	test = True
-	pumpkin = False
+	pumpkint = False
 	while(j < 300):
 		visited = set()
 		solve_maze()
@@ -73,13 +73,13 @@ def Maze(desired = {Items.Gold: 100}, multiple = 1):
 			j = 299
 			test = False
 		if num_items(Items.Fertilizer) < 5:
-			if not trade(Items.Fertilizer, 40) and test:
+			if not trade(Items.Fertilizer, 30) and test:
 				j = 299
 				test = False
-				Pumpkin = True
+				pumpkint = True
 	harvest()
-	if Pumpkin:
-		Buy(Items.Fertilizer, 50)
+	if pumpkint:
+		Buy(Items.Fertilizer, 40)
 a = get_time()
 Maze({Items.Gold: 100}, 1000000000000000)
 quick_print(get_time() - a)

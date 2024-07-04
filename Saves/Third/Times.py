@@ -1,6 +1,6 @@
 #Bests 
-#Early game: 382.95
-#Polly:  1000.67
-#Mazes:  1561.24
-#Dino:  1930.69
-#Fin : 2401.68
+#Early game: 380.45
+#Polly:  835.52
+#Mazes:  1414.39
+#Dino:  1769.16
+#Fin : 2258.88
